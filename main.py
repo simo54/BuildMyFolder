@@ -35,5 +35,10 @@ if question_path == str(1):
     else:
         print("Successfully created the directory %s " % path)
 else:
-    files_names = input("\n📃 Specify the name of the files (space for separation): ")
-    files_to_create = files_names.split()
+    files_names = input("\n📃 Specify the name of the file: ")
+    # files_to_create = files_names.split()
+
+    file_name = f"{files_names}.txt"
+    f = open(file_name, "a+")  # open file in append mode
+    f.write("export {};")
+    f.close()
