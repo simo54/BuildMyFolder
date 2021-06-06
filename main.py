@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 import os
+
 from file_ext import declare_extensions
 from pathlib import Path
 
 path = os.getcwd()
+
 print("The current working directory is %s" % path)
 
 question_path = input(
@@ -21,7 +23,6 @@ if question_path == str(1):
             "\n📂 Specify the name of the folders (space for separation): "
         )
         folders_to_create = folders_names.split()
-        parent_dir = path
 
         for folder in folders_to_create:
             os.mkdir(os.path.join(path, str(folder)))
