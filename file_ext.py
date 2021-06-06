@@ -4,8 +4,6 @@ def declare_extensions(name, extensions):
 
     # If more than one file is declared
     if len(files_name) > 1:
-        test = files_name.map(name)
-        print(test)
         for name in files_name:
             values = {
                 "py": f"{name}.py",
