@@ -20,7 +20,7 @@ except Exception:
 if question_path == str(1):
     try:
         folders_names = input(
-            "\n📂 Specify the name of the folders (space for separation): "
+            "\n📂 Specify the name of the folder(s) (space for separation): "
         )
         folders_to_create = folders_names.split()
 
@@ -32,8 +32,10 @@ if question_path == str(1):
         print("Successfully created the directory %s " % path)
 else:
     try:
-        files_names = input("\n📃 Specify the name of the file: ")
-        file_extension = input("\n🌀 Declare files extension: ")
+        files_names = input(
+            "\n📃 Specify the name of the file(s) (space for separation): ")
+        file_extension = input(
+            "\n🌀 Declare files extension(s) (space for separation): ")
 
         declare_extensions(files_names, file_extension)
     except os.error:
